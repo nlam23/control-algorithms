@@ -35,6 +35,7 @@ while True:
   print("Accelerometer (m/s^2): {}".format(sensor.acceleration))
   #Gives the raw accelerometer readings, in m/s. Returns an empty tuple of length 3 when this property has been disabled by the current mode.
   print("Magnetometer (microteslas): {}".format(sensor.magnetic))
+  # Gives the raw magnetometer readings in microteslas. Returns an empty tuple of length 3 when this property has been disabled by the current mode.
   print("Gyroscope (rad/sec): {}".format(sensor.gyro))
   print("Euler angle: {}".format(sensor.euler))
   print("Quaternion: {}".format(sensor.quaternion))
