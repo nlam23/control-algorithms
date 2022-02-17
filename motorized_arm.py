@@ -27,7 +27,7 @@ function setup() {
   slider.style('width', '80px');
 }
 
-let SETPOINT = 90;
+let SETPOINT = 120;
 let MOTOR_TORQUE = 1200;
 let TOLERANCE = 5;
 
@@ -37,18 +37,9 @@ function draw() {
   armSimulation();
   
   // Use the arm_torque slider to observe the effect of torque on the position of the arm. When you are ready to try to automate this, comment out the next line.
-  //arm_torque = map(slider.value(),0,255,-2000,2000);
-  let k = 500;
-  let kI = 10;
-  let kD = 100;
-  let error = SETPOINT - arm_angle;
-  sum_error = sum_error + error
-  change_error = error + last_error
-  let output = k*error + kI*sum_error + kD*change_error;
+  arm_torque = map(slider.value(),0,255,-2000,2000);
   
-  arm_torque = output;
-  last_erorr = error
-  
+    // your automated code goes here:
   
   
 }
